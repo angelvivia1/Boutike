@@ -1,0 +1,36 @@
+<%= form_for(@catalog) do |f| %>
+  <% if @catalog.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@catalog.errors.count, "error") %> prohibited this catalog from being saved:</h2>
+
+      <ul>
+      <% @catalog.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <div class="form-group">
+
+  <div class="field">
+    <%= f.label :image, "Url de la imagen" %><br>
+    <%= f.text_field :image, :class => 'form-control' %>
+  </div>
+      </div>
+    <div class="form-group">
+  <div class="field">
+    <%= f.label :price, "Precio" %><br>
+    <%= f.text_field :price, :class => 'form-control' %>
+  </div>
+        </div>
+      <div class="form-group">
+  <div class="field">
+
+    <%= f.label :description, "Descripcion" %><br>
+    <%= f.text_area :description, :class => 'form-control' %>
+  </div>
+        </div>
+  <div class="actions">
+    <%= f.submit 'Guardar', :class => "btn btn-default"  %>
+  </div>
+<% end %>

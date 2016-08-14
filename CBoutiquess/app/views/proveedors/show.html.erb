@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-5 col-md-offset-3">
+      <h1> Proveedor</h1>
+
+<p id="notice"><%= notice %></p>
+      <ul class="list-group">
+        <li class="list-group-item">
+<p>
+  <strong>Name:</strong>
+  <%= @proveedor.name %>
+</p>
+        </li>
+        <li class="list-group-item">
+<p>
+  <strong>Phone:</strong>
+  <%= @proveedor.phone %>
+</p></li>
+        <li class="list-group-item">
+<p>
+  <strong>Email:</strong>
+  <%= @proveedor.email %>
+</p>
+</li>
+        <li class="list-group-item">
+<p>
+  <strong>City:</strong>
+  <%= @proveedor.city %>
+</p></li>
+        <li class="list-group-item">
+<p>
+  <strong>Neighborhood:</strong>
+  <%= @proveedor.neighborhood %>
+</p></li>
+        <li class="list-group-item">
+<p>
+  <strong>Street number:</strong>
+  <%= @proveedor.street_number %>
+</p>
+</li>
+
+        <li class="list-group-item">
+          <p>
+            <strong>RFC:</strong>
+            <%= @proveedor.pro_rfc %>
+          </p>
+        </li>
+
+
+
+
+        <li class="list-group-item">
+<%= link_to 'Editar', edit_proveedor_path(@proveedor),  :class => "btn btn-warning" %> |
+<%= link_to 'Regresar', proveedors_path,  :class => "btn btn-success" %>
+        </li>
+        </ul>
+</div>
+      </div>
+    </div>

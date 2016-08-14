@@ -1,0 +1,29 @@
+<!-- Static navbar -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="<%= root_path %>">Control Boutique</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="<%= signup_path  %>">Crear una cuenta</a></li>
+            <li><a href="<%= login_path %>">Iniciar session</a></li>
+            <% if logged_in? %>
+                <li class="active"><a href="<%=  user_path %>">Mi Perfil</a></li>
+            <% end %>
+
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div><!--/.container-fluid -->
+    </nav>
+<div class="container">
+
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h2>Bienvenido!!!</h2>
+<p>Esta aplicación fue desarrollada con el objetivo de tener el control de la “Boutique Juanita”,  aquí se puede administrar lo siguiente: Empleados, Productos, Proveedores, Ventas, Catalogo, Galerías.</p>
+      <img src="http://graphichouze.com/wp-content/uploads/2015/09/EXTRAFORBES.jpg" class="img-responsive">
+</div>
+      </div>
+      </div>
+

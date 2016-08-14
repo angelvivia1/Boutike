@@ -1,0 +1,67 @@
+<!-- Static navbar -->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="<%= root_path %>">Control Boutique</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li ><a href="<%= user_path %>">Home</a></li>
+        <li ><a href="<%= employees_path %>">Empleados</a></li>
+        <li ><a href="<%= proveedors_path %>">Proveedores</a></li>
+        <li><a href="<%= products_path %>">Productos</a></li>
+        <li><a href="#">Ventas</a></li>
+        <li class="active"><a href="<%= catalogs_path %>">Galeria</a></li>
+        <li ><a href="<%= catalogo_usuarios_path %>">Catalogo de Usuarios</a></li>
+        <li ><a href="<%= us_index_path %>">Nosotros</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li ></li>
+
+        <li><%= link_to "Cerrar sesion", logout_path, method: :delete %></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container-fluid -->
+</nav>
+
+<p id="notice"><%= notice %></p>
+
+
+
+<div id="container">
+  <h1>Lista de Catalogo</h1>
+  <% @catalogs.each do |catalog| %>
+
+      <div class="col-md-3" >
+      <div class="thumbnail">
+        <%= image_tag(catalog.image, :class=> 'img-responsive')  %>
+        <%= catalog.price %>
+        <%= catalog.description %>
+        <div class="buttons" style="margin-top: 10px; margin-bottom: 10px">
+          <%= link_to 'Show', catalog, :class => 'btn btn-info' %>
+          <%= link_to 'Edit', edit_catalog_path(catalog), :class => 'btn btn-warning' %>
+          <%= link_to 'Destroy', catalog, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger' %>
+        </div>
+        </div>
+
+    </div>
+<% end %>
+<br>
+      <%= link_to 'Nuevo Catalogo', new_catalog_path, :class => "btn btn-success"  %>
+
+<script type="text/javascript">
+  var $container = $('#container');
+  $container.masonry({
+    columnWidth: 200,
+    itemSelector: '.item'
+  });
+  $(window).load(function() {
+    var $container = $('#container');
+    $container.masonry({
+      columnWidth: 200,
+      itemSelector: '.item'
+    });
+  })
+</script>
+
+</div>

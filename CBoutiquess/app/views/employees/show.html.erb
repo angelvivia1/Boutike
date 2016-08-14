@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-5 col-md-offset-3">
+
+      <h1>Empleado</h1>
+<p id="notice"><%= notice %></p>
+
+
+  <ul class="list-group">
+    <li class="list-group-item">
+      <p>
+        <strong>First name:</strong>
+      </p>
+    </li>
+    <li class="list-group-item">
+      <p>
+        <strong>Last name:</strong>
+        <%= @employee.last_name %>
+      </p>
+    </li>
+    <li class="list-group-item"><p>
+      <strong>City:</strong>
+      <%= @employee.city %>
+    </p></li>
+    <li class="list-group-item"><p>
+      <strong>Neighborhood:</strong>
+      <%= @employee.neighborhood %>
+    </p></li>
+    <li class="list-group-item"><p>
+      <strong>Street number:</strong>
+      <%= @employee.street_number %>
+    </p>
+    </li>
+    <li class="list-group-item"><p>
+      <strong>Email:</strong>
+      <%= @employee.email %>
+    </p></li>
+    <li class="list-group-item"><p>
+      <strong>Age:</strong>
+      <%= @employee.age %>
+    </p></li>
+    <li class="list-group-item"><p>
+      <strong>Celphone:</strong>
+      <%= @employee.celphone %>
+    </p></li>
+    <li class="list-group-item"><p>
+      <strong>Date hire:</strong>
+      <%= @employee.date_hire %>
+    </p></li>
+
+    <li class="list-group-item"><%= link_to 'Editar', edit_employee_path(@employee),  :class => "btn btn-warning" %> |
+      <%= link_to 'Regresar', employees_path,  :class => "btn btn-default" %></li>
+  </ul>
+
+</div>
+</div>
+</div>

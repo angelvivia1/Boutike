@@ -1,0 +1,66 @@
+<!-- Static navbar -->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="<%= root_path %>">Control Boutique</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li ><a href="<%= user_path %>">Home</a></li>
+        <li ><a href="<%= employees_path %>">Empleados</a></li>
+        <li ><a href="<%= proveedors_path %>">Proveedores</a></li>
+        <li><a href="<%= products_path %>">Productos</a></li>
+        <li><a href="#">Ventas</a></li>
+        <li ><a href="<%= catalogs_path %>">Galeria</a></li>
+        <li ><a href="<%= catalogo_usuarios_path %>">Catalogo de Usuarios</a></li>
+        <li class="active"><a href="<%= us_index_path %>">Nosotros</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li ></li>
+
+        <li><%= link_to "Cerrar sesion", logout_path, method: :delete %></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container-fluid -->
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="page-header">
+        <h2 style="display: inline">Dirección</h2>
+      </div>
+      <h4>Ubicacion de Boutique Juanita:</h4>
+      <p class="titulos">Calle Nayarit #24, Colonia centro, Dolores Hidalgo, Guanajuato México.</p>
+      <img src="http://www.citynetsa.com/uploads/content/2015/09/35.png" class="img-responsive">
+    </div>
+
+    <div class="col-md-4">
+      <div class="page-header">
+        <h2>Contacto</h2>
+      </div>
+      <h4>Para obtener información.</h4>
+      <p>Teléfono: 418-130-9151 </p>
+      <p>Correo Electrónico: julio.cmc19892@gmail.com </p>
+      <img src="http://www.marketingguerrilla.es/wp-content/uploads/2015/04/generar-contactos.jpg" class="img-responsive">
+
+
+    </div>
+
+    <div class="col-md-4">
+      <div class="page-header">
+        <h2>Horario</h2>
+      </div>
+      <h4>Horario de Atención</h4>
+      <p>
+       Lunes a Domingo de 10:00 am a 6:00 pm.
+      </p>
+      <img src="http://www.quitofun.com/images/img_horario_atencion.jpg" class="img-responsive">
+      <img src="http://www.tecnoforsur.com/webtec/images/reloj.png" class="img-responsive">
+
+    </div>
+
+
+  </div>
+
+</div>
+

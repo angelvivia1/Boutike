@@ -1,0 +1,76 @@
+
+<%= form_for(@employee) do |f| %>
+  <% if @employee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@employee.errors.count, "error") %> prohibited this employee from being saved:</h2>
+
+      <ul>
+      <% @employee.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+            <div class="form-group">
+  <div class="field">
+    <%= f.label :first_name, "Nombre(s)" %><br>
+    <%= f.text_field :first_name, :class => 'form-control'  %>
+    </div>
+  </div>
+            <div class="form-group">
+  <div class="field">
+    <%= f.label :last_name, "Apellido(s)" %><br>
+    <%= f.text_field :last_name, :class => 'form-control'  %>
+  </div>
+              </div>
+            <div class="form-group">
+  <div class="field">
+    <%= f.label :city, "Ciudad" %><br>
+    <%= f.text_field :city, :class => 'form-control'  %>
+  </div>
+              </div>
+            <div class="form-group">
+  <div class="field">
+    <%= f.label :neighborhood, "Colonia" %><br>
+    <%= f.text_field :neighborhood, :class => 'form-control'  %>
+  </div>
+              </div>
+            <div class="form-group">
+  <div class="field">
+    <%= f.label :street_number, "Calle y Número" %><br>
+    <%= f.text_field :street_number, :class => 'form-control'  %>
+  </div>
+              </div>
+
+    <div class="form-group">
+      <div class="field">
+        <%= f.label :email, "Email" %><br>
+        <%= collection_select(:employee, :email ,@user, :email, :email, prompt: true, :class => 'form-control') %>
+      </div>
+    </div>
+
+    <div class="form-group">
+  <div class="field">
+    <%= f.label :age, "Edad" %><br>
+    <%= f.number_field :age, :class => 'form-control'  %>
+  </div>
+                  </div>
+            <div class="form-group">
+  <div class="field">
+    <%= f.label :celphone, "Celular" %><br>
+    <%= f.text_field :celphone, :class => 'form-control'  %>
+  </div>
+              </div>
+            <div class="form-group">
+  <div class="field">
+    <%= f.label :date_hire, "Fecha de contratación" %><br>
+    <%= f.date_select :date_hire, :class => 'form-control'  %>
+  </div>
+              </div>
+
+  <div class="actions">
+    <%= f.submit "Guardar", :class => "btn btn-default"  %>
+  </div>
+<% end %>
+

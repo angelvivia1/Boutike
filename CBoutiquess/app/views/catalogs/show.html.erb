@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-5 col-md-offset-3">
+
+      <h1>Detalle del Catalogo</h1>
+<p id="notice"><%= notice %></p>
+      <ul class="list-group">
+        <li class="list-group-item">
+<p>
+  <strong>Imagen:</strong>
+  <%= image_tag(@catalog.image, :class=> 'img-responsive ')%>
+</p>
+</li>
+        <li class="list-group-item">
+<p>
+  <strong>Precio:</strong>
+  <%= @catalog.price %>
+</p>
+</li>
+        <li class="list-group-item">
+<p>
+  <strong>Descripción:</strong>
+  <%= @catalog.description %>
+</p>
+</li>
+        <li class="list-group-item">
+
+<%= link_to 'Edit', edit_catalog_path(@catalog),  :class => "btn btn-warning" %> |
+<%= link_to 'Back', catalogs_path,  :class => "btn btn-default" %>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
